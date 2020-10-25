@@ -8,18 +8,24 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@ant-design/react-native": "^4.0.5",
     "expo": "~39.0.2",
+    "expo-application": "^2.3.0",
+    "expo-auth-session": "^2.0.0",
     "expo-status-bar": "~1.0.2",
+    "firebase": "^7.9.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "react-native-webview": "^10.9.3"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
+    "babel-plugin-import": "^1.13.1",
     "typescript": "~3.9.5"
   },
   "private": true
