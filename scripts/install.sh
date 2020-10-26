@@ -11,3 +11,16 @@ yarn add expo-application
 
 # https://docs.expo.io/versions/latest/sdk/securestore/
 yarn add expo-secure-store
+
+# 
+# reactnavigation ref: https://www.youtube.com/watch?v=Hln37dE19bs
+# 
+
+# Install the required packages in your React Native project:
+yarn add @react-navigation/native
+
+# Installing dependencies into an Expo managed project
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+# https://reactnavigation.org/docs/upgrading-from-4.x#package-names
+yarn add @react-navigation/stack @react-navigation/bottom-tabs @react-navigation/drawer
