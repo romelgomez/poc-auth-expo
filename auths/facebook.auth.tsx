@@ -9,7 +9,8 @@ import { ResponseType } from 'expo-auth-session';
 
 maybeCompleteAuthSession();
 
-const FB_APP_ID = "145668956753819";
+// TODO: Get facebook id from enviroments 
+const FB_APP_ID = "";
 
 export function FacebookAuth() {
   const [request, response, promptAsync] = useAuthRequest({

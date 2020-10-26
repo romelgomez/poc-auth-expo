@@ -47,7 +47,7 @@ function AuthView() {
         <WhiteSpace size="lg" />
         <GoogleAuth />
         <WhiteSpace size="lg" />
-        <FacebookAuth />
+        {/* <FacebookAuth /> */}
       </View>
     );
   }
@@ -88,98 +88,3 @@ const styles = StyleSheet.create({
   },
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { StatusBar } from 'expo-status-bar';
-// import { 
-//   ResponseType
-// } from 'expo-auth-session';
-// import * as SecureStore from 'expo-secure-store';
-
-{/* <Button onPress={onGoogleButtonPress} >Google Sign-In</Button> */}
-{/* <WhiteSpace size="lg" /> */}
-{/* <PhoneSignIn /> */}
-
-{/* <WhiteSpace size="lg" /> */}
-{/* <Button onPress={createUserWithEmailAndPassword}>CreateUser</Button>
-<WhiteSpace size="lg" /> */}
-{/* <Button onPress={signInWithEmailAndPassword}>SignIn with Email</Button> */}
-
-// type WebBrowserExampleState = {
-//   result: null | WebBrowser.WebBrowserResult;
-// };
-{/* <LoginFirebaseFlow /> */}
-{/* <WhiteSpace /> */}
-{/* <LoginStandarFlow /> */}
-{/* <WhiteSpace /> */}
-{/* <WhiteSpace /> */}
-{/* <WebBrowserExample /> */}
