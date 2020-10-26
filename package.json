@@ -1,7 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
+    "start": "cross-env NODE_ENV=dev expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@ant-design/react-native": "^4.0.5",
+    "babel-plugin-inline-dotenv": "^1.6.0",
+    "dotenv": "^8.2.0",
     "expo": "~39.0.2",
     "expo-application": "^2.3.0",
     "expo-auth-session": "^2.0.0",
@@ -27,6 +29,10 @@
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
     "babel-plugin-import": "^1.13.1",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-rename": "^2.0.0",
     "typescript": "~3.9.5"
   },
   "private": true
