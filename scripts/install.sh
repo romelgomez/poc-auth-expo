@@ -8,3 +8,6 @@ yarn add expo-auth-session
 
 # https://docs.expo.io/guides/authentication/#google
 yarn add expo-application 
+
+# https://docs.expo.io/versions/latest/sdk/securestore/
+yarn add expo-secure-store
