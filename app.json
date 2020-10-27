@@ -22,9 +22,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "scheme": "com.pocexpoauth",
+    "scheme": "demo",
     "android": {
-      "package": "com.pocexpoauth"
+      "package": "com.pocexpoauth.demo"
     }
   }
 }
