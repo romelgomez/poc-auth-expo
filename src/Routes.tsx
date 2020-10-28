@@ -66,16 +66,38 @@ export const Routes: React.FC<RoutesProps> = ({}) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Observable * 
+
+        console.log('Routes:useEffect');
+
+        let i = 0;
+
+
+        // Observable *
         // ref: https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user
-        return firebase
+        const unsubscribe: firebase.Unsubscribe = firebase
                 .auth()
                 .onAuthStateChanged((user: firebase.User | null) => {
+
+                    console.log(
+                        'Routes:onAuthStateChanged:user',
+                        `Invoked: [${i++}] times,`,
+                        `uid: ${user?.uid},`,
+                        `email: ${user?.email},`,
+                        `isAnonymous: ${user?.isAnonymous}.`,
+                    );
+
+
                     setUser(user);
                     setLoading(false);
                 }, (error: firebase.auth.Error) => {
-                    console.error(error);
+                    console.error('Routes:onAuthStateChanged:error', error);
                 });
+
+        return () => {
+            console.log('Routes:onAuthStateChanged:UNMOUNTED');
+
+            unsubscribe();
+        }
     }, []);
     
     if (loading) {
@@ -86,7 +108,12 @@ export const Routes: React.FC<RoutesProps> = ({}) => {
         );
     }
 
-    console.log('user');
+    console.log(
+        'Routes:user',
+        `uid: ${user?.uid}`,
+        `email: ${user?.email},`,
+        `isAnonymous: ${user?.isAnonymous}.`,
+    );
 
     return (
         <NavigationContainer>

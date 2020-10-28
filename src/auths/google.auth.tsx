@@ -9,9 +9,13 @@ import { Button } from '@ant-design/react-native';
 maybeCompleteAuthSession();
 
 export function GoogleAuth() {
+  // TODO: Move the keys to environment logic
+  // https://github.com/expo/expo/issues/3540#issuecomment-466709365
+  // https://docs.expo.io/versions/latest/sdk/google/
   const [request, response, promptAsync] = useIdTokenAuthRequest({
-    clientId:
-      '840594218977-rml59vj7aafmpkq47j2e1hbt60p58pkm.apps.googleusercontent.com',
+    expoClientId: '840594218977-rml59vj7aafmpkq47j2e1hbt60p58pkm.apps.googleusercontent.com', 
+    webClientId: '840594218977-rml59vj7aafmpkq47j2e1hbt60p58pkm.apps.googleusercontent.com',
+    androidClientId: '840594218977-m6imhapocuon6ubhd1at8emgj9um9s0u.apps.googleusercontent.com',
   });
 
   const login = () => {
@@ -21,7 +25,7 @@ export function GoogleAuth() {
   };
 
   useEffect(() => {
-    console.log('LoginFirebaseFlow:response: ', response);
+    // console.log('LoginFirebaseFlow:response: ', JSON.stringify(response));
 
     if (Platform.OS === 'android') {
       warmUpAsync();
@@ -35,6 +39,14 @@ export function GoogleAuth() {
       firebase
         .auth()
         .signInWithCredential(credential)
+        .then(({ user }: firebase.auth.UserCredential) => {
+          console.log(
+            'GoogleAuth:signInWithCredential',
+            `uid: ${user?.uid},`,
+            `email: ${user?.email},`,
+            `isAnonymous: ${user?.isAnonymous}.`,
+          ); 
+        })
         .catch((reason) => {
           console.error(reason);
         });
@@ -48,6 +60,9 @@ export function GoogleAuth() {
   }, [response]);
 
   return (
+    // <div>
+    //   <Button onPress={methodDoesNotExist}>Break the world</Button>;
+    // </div>
     <Button disabled={!request} onPress={login}>Login with Google</Button>
   );
 }

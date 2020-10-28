@@ -2,7 +2,7 @@
   "expo": {
     "name": "poc-expo-auth",
     "slug": "poc-expo-auth",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -24,7 +24,9 @@
     },
     "scheme": "demo",
     "android": {
-      "package": "com.pocexpoauth.demo"
+      "package": "com.pocexpoauth.demo",
+      "versionCode": 3,
+      "googleServicesFile": "./google-services.json"
     }
   }
 }

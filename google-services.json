@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "840594218977",
+    "firebase_url": "https://poc-expo-ant-auth.firebaseio.com",
+    "project_id": "poc-expo-ant-auth",
+    "storage_bucket": "poc-expo-ant-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840594218977:android:53069820105a4dbb2dbca0",
+        "android_client_info": {
+          "package_name": "com.pocexpoauth.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840594218977-m6imhapocuon6ubhd1at8emgj9um9s0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pocexpoauth.demo",
+            "certificate_hash": "081f1728bf579f041cfd804088b4828c6196572a"
+          }
+        },
+        {
+          "client_id": "840594218977-rml59vj7aafmpkq47j2e1hbt60p58pkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQDr-R1G4ZkOHweu6ScZtkUpmvEoa0NRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840594218977-rml59vj7aafmpkq47j2e1hbt60p58pkm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

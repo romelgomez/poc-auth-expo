@@ -7,13 +7,13 @@ function signInAnonymously() {
     .auth()
     .signInAnonymously()
     .then((userCredential: firebase.auth.UserCredential) => {
-        console.log(userCredential);
-        console.log('User signed in anonymously');
+        // console.log(userCredential);
+        // console.log('User signed in anonymously');
     })
     .catch((error) => {
-      if (error.code === 'auth/operation-not-allowed') {
-        console.log('Enable anonymous in your firebase console.');
-      }
+      // if (error.code === 'auth/operation-not-allowed') {
+      //   console.log('Enable anonymous in your firebase console.');
+      // }
       console.error(error);
     });
 }

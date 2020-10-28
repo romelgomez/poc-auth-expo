@@ -25,7 +25,7 @@ export function FacebookAuth() {
   };
 
   useEffect(() => {
-    console.log('LoginFirebaseFlow:response: ', response);
+    // console.log('LoginFirebaseFlow:response: ', response);
 
     if (Platform.OS === 'android') {
       warmUpAsync();
